@@ -3,8 +3,8 @@ This is an Movie Finding App that I have build for users to find information abo
 It is written in Python with Flask framewor and utilizes the OMDB API to query data from. This App can search and match any movies that the user types in and output the similar movies.
 
 ![screenshots](img/main.png)
-![screenshots](img/search results.png)
-![screenshots](img/movie display.png)
+![screenshots2](img/movie display.png)
+![screenshots3](img/search results.png)
 
 
 ## 📄 About
