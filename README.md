@@ -9,7 +9,7 @@ It is written in Python with Flask framework and utilizes the OMDB API to query 
 ## 📄 About
 - Download and instructions:
 (make sure you have python version 3+ on your system)
-'''
+```
 $ git clone https://github.com/StevenLikesToCode/Movie-Finder.git Movie_Finder
 $ cd Movie_Finder
 $ python -m venv venv
@@ -17,7 +17,7 @@ $ . venv/bin/activate
 $ pip install Flask
 $ pip install requests
 $ flask --app app run
-'''
+```
 
 
 <!--
