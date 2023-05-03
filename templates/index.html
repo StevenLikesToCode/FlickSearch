@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies 1</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+
+        form {
+            margin-top: 50px;
+        }
+
+        button {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        input[type="text"] {
+            font-size: 1.2rem;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            width: 500px;
+            height: 28px;
+            margin-top: 20px;
+            border: none;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Find a Movie</h1>
+    <form action="/search_results">
+        <input type="text" name="search_input" placeholder="Type in a movie you like">
+        <button>Get Matches</button>
+    </form>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        li {
+            margin: 1rem;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.25rem;
+        }
+
+        a:hover {
+            color: #007bff;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Movie Search Results</h1>
+    {% if search_results %}
+    <ul>
+        {% for result in search_results['Search'] %}
+        <li><a href="/movies?imdbID={{ result['imdbID']}}">{{ result['Title'] }} ({{ result['Year'] }})</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No search results found.</p>
+    {% endif %}
+</body>
+
+</html>

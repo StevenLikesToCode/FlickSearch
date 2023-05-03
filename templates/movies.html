@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #F5F5F5;
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        img {
+            margin: 20px 0;
+            max-width: 40%;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+        }
+
+        .movie-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            padding: 30px;
+            margin: 20px;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .movie-info p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .rating {
+            font-weight: bold;
+            color: #FFA500;
+        }
+
+        span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="movie-info">
+        <h1>{{ movie_info['Title'] }}</h1>
+        <img src="{{ movie_info['Poster'] }}" alt="Movie Poster">
+        <p><span>Actors:</span> {{ movie_info['Actors'] }}</p>
+        <p><span>Director:</span> {{ movie_info['Director'] }}</p>
+        <p><span>Year:</span> {{ movie_info['Year'] }}</p>
+        <p><span>Runtime:</span> {{ movie_info['Runtime'] }}</p>
+        <p><span>Genre:</span> {{ movie_info['Genre'] }}</p>
+        <p><span>Plot:</span> {{ movie_info['Plot'] }}</p>
+        <ul>
+            {% for rating in movie_info['Ratings'] %}
+            <li>{{ rating['Source'] }}: <span class="rating">{{ rating['Value'] }}</span></li>
+            {% endfor %}
+        </ul>
+        <p><span>IMDB Rating:</span> <span class="rating">{{ movie_info['imdbRating'] }}</span></p>
+    </div>
+</body>
+
+</html>
