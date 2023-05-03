@@ -1,6 +1,6 @@
 # Movie-Finder
 This is an Movie Finding App that I have build for users to find information about the movies they are interested in. 
-It is written in Python with Flask framewor and utilizes the OMDB API to query data from. This App can search and match any movies that the user types in and output the similar movies.
+It is written in Python with Flask framework and utilizes the OMDB API to query data from. This App can search and match any movies that the user types in and output the similar movies.
 
 ![screenshots](img/main.png)
 ![screenshots3](img/search_results.png)
@@ -9,6 +9,7 @@ It is written in Python with Flask framewor and utilizes the OMDB API to query d
 ## 📄 About
 - Download and instructions:
 (make sure you have python version 3+ on your system)
+'''
 $ git clone https://github.com/StevenLikesToCode/Movie-Finder.git Movie_Finder
 $ cd Movie_Finder
 $ python -m venv venv
@@ -16,7 +17,7 @@ $ . venv/bin/activate
 $ pip install Flask
 $ pip install requests
 $ flask --app app run
-
+'''
 
 
 <!--
