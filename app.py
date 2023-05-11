@@ -1,10 +1,18 @@
 from flask import Flask, render_template, request
 import requests
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Load environment variables from the .env file
 
 app = Flask(__name__)
 
+API_KEY = os.environ.get('API_KEY', 'pretend key for test only')
+app.config['API_KEY'] = API_KEY
+print (API_KEY)
+
 def get_results(search_input):
-    url = f'http://www.omdbapi.com/?apikey=cc10c3c3&s={search_input}'
+    url = f'http://www.omdbapi.com/?apikey={API_KEY}={search_input}'
     response = requests.get(url)
     search_results = response.json()
     return search_results
