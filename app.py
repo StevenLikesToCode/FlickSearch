@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 API_KEY = os.environ.get('API_KEY', 'pretend key for test only')
 app.config['API_KEY'] = API_KEY
-print (API_KEY)
+# print (API_KEY)
 
 def get_results(search_input):
     url = f'http://www.omdbapi.com/?apikey={API_KEY}={search_input}'
