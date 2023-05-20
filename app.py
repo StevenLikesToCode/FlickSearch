@@ -7,18 +7,18 @@ load_dotenv()  # Load environment variables from the .env file
 
 app = Flask(__name__)
 
-API_KEY = os.environ.get('API_KEY', 'pretend key for test only')
+API_KEY = os.environ.get('API_KEY')
 app.config['API_KEY'] = API_KEY
 # print (API_KEY)
 
 def get_results(search_input):
-    url = f'http://www.omdbapi.com/?apikey={API_KEY}={search_input}'
+    url = f'http://www.omdbapi.com/?apikey={API_KEY}&s={search_input}'
     response = requests.get(url)
     search_results = response.json()
     return search_results
 
 def get_movies(imdbID):
-    url = f'http://www.omdbapi.com/?apikey=cc10c3c3&i={imdbID}'
+    url = f'http://www.omdbapi.com/?apikey={API_KEY}&i={imdbID}'
     response = requests.get(url)
     movie_info = response.json()
     return movie_info
